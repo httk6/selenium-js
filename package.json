@@ -1,0 +1,16 @@
+{
+  "name": "intern_on_azure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "intern",
+    "test:mac": "intern config=@mac",
+    "test:ie": "intern config=@ie"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "intern": "^4.3.3"
+  }
+}
