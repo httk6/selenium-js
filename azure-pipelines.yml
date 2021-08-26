@@ -48,18 +48,17 @@ jobs:
 - job: linux
   pool:
     vmImage: 'ubuntu-20.04'
-  steps:
+   steps:
   - task: NodeTool@0
     inputs:
       versionSpec: '8.x'
     displayName: 'Install Node.js'
-  - script: sudo apt install nodejs
+  - script: |
+      npm install
     displayName: 'npm install'
-  - script: sudo npm install -g npm
-    displayName: 'npm install selenium-webdriver '
-  - script: sudo npm install selenium-webdriver
+  - script: |
+      npm test
     displayName: 'npm test'
-  - script: sudo node test/search_uopolo.js
     continueOnError: true
   - task: PublishTestResults@2
     inputs:
