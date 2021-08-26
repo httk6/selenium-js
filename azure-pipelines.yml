@@ -48,7 +48,7 @@ jobs:
 - job: linux
   pool:
     vmImage: 'ubuntu-20.04'
-   steps:
+  steps:
   - task: NodeTool@0
     inputs:
       versionSpec: '8.x'
