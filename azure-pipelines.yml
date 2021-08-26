@@ -54,10 +54,10 @@ jobs:
       versionSpec: '8.x'
     displayName: 'Install Node.js'
   - script: |
-       nvm install
+       npm install
     displayName: 'npm install'
   - script: |
-      nvm test
+      npm test
     displayName: 'npm test'
     continueOnError: true
   - task: PublishTestResults@2
