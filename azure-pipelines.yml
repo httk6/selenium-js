@@ -58,8 +58,7 @@ jobs:
     displayName: 'npm install'
   - script: |
       npm test
-    displayName: 'npm test'
-    continueOnError: true
+
   - task: PublishTestResults@2
     inputs:
       testRunner: JUnit
