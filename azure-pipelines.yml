@@ -53,14 +53,15 @@ jobs:
     inputs:
       versionSpec: '8.x'
     displayName: 'Install Node.js'
-  - script: sudo apt install nodejs
+  - script: |
+      npm install
     displayName: 'npm install'
-  - script: sudo npm install -g npm
+  - script: |
+      npm test
     displayName: 'npm test'
-  - script: sudo node test/search_uopolo.js
     continueOnError: true
-
   - task: PublishTestResults@2
     inputs:
       testRunner: JUnit
       testResultsFiles: junit-results.xml
+      
