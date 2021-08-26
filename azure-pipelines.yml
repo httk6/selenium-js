@@ -54,7 +54,7 @@ jobs:
       versionSpec: '8.x'
     displayName: 'Install Node.js'
   - script: |
-       npm install
+       npm install v13.14.0
   - script: |
       node -v
     displayName: 'npm install'
