@@ -53,11 +53,12 @@ jobs:
     inputs:
       versionSpec: '8.x'
     displayName: 'Install Node.js'
-  - script: |
-      npm install
+  - script: sudo apt install nodejs
     displayName: 'npm install'
-  - script: |
-      npm test
+  - script: sudo npm install -g npm
+    displayName: 'npm test'
+  - script: sudo node test/search_uopolo.js
+    continueOnError: true
 
   - task: PublishTestResults@2
     inputs:
