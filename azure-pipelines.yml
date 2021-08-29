@@ -57,6 +57,8 @@ jobs:
        npm install
   - script: |
       node -v
+  - script: |
+      chromedriver --version
     displayName: 'npm install'
   - script: |
       npm test
